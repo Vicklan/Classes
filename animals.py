@@ -1,22 +1,22 @@
 class Animals:
-    def __init__(self,weight,height,age,food):
+    def __init__(self, name, weight, height, food):
+        self.name = name
         self.weight = weight
         self.height = height
-        self.age  = age
         self.food = food
-    def grow (self ):
-        print(self.weight," Kgs and ",self.height," metres")
-    def reproduce(self,age):
-        pass
-    def eat(self,food):
-        pass
+    def getFood (self):
+        return self.__food
+
+    def setFood(self,food):
+        self.__food = food
+
+         
+     
 class Birds(Animals):
-    def fly(self,speed,altitude):
-        pass
-class Fish(Animals):
-    def swim(self,depth):
-        pass
-
-lion = Animals(120,1.2,4,"meat")
-
-lion.grow()
+    def fly(self, speed):
+        print(self.name,"fly at",speed,"KPH max")
+ 
+bird1 = Birds("Eagles", 6, 0.45, "mouse")
+bird1.setFood("Hare")
+print(bird1.getFood())
+ 
